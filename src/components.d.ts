@@ -5,21 +5,104 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { GetShipmentDetails } from "./domain/usages/get-shipment-details";
 export namespace Components {
-
+    interface BluedartTrackingComponent {
+        /**
+          * The checkpoints
+         */
+        "checkpoints": boolean;
+        /**
+          * The tracking number
+         */
+        "trackingNumber": string;
+    }
+    interface ShipmentComponent {
+        /**
+          * The checkpoints
+         */
+        "checkpoints": boolean;
+        /**
+          * Get Shipment details
+         */
+        "getShipmentDetails": GetShipmentDetails;
+        /**
+          * The tracking number
+         */
+        "trackingNumber": string;
+    }
+    interface ShipmentDetailsFactory {
+        "checkpoints": boolean;
+        "trackingNumber": string;
+    }
 }
 declare global {
+    interface HTMLBluedartTrackingComponentElement extends Components.BluedartTrackingComponent, HTMLStencilElement {
+    }
+    var HTMLBluedartTrackingComponentElement: {
+        prototype: HTMLBluedartTrackingComponentElement;
+        new (): HTMLBluedartTrackingComponentElement;
+    };
+    interface HTMLShipmentComponentElement extends Components.ShipmentComponent, HTMLStencilElement {
+    }
+    var HTMLShipmentComponentElement: {
+        prototype: HTMLShipmentComponentElement;
+        new (): HTMLShipmentComponentElement;
+    };
+    interface HTMLShipmentDetailsFactoryElement extends Components.ShipmentDetailsFactory, HTMLStencilElement {
+    }
+    var HTMLShipmentDetailsFactoryElement: {
+        prototype: HTMLShipmentDetailsFactoryElement;
+        new (): HTMLShipmentDetailsFactoryElement;
+    };
     interface HTMLElementTagNameMap {
+        "bluedart-tracking-component": HTMLBluedartTrackingComponentElement;
+        "shipment-component": HTMLShipmentComponentElement;
+        "shipment-details-factory": HTMLShipmentDetailsFactoryElement;
     }
 }
 declare namespace LocalJSX {
+    interface BluedartTrackingComponent {
+        /**
+          * The checkpoints
+         */
+        "checkpoints"?: boolean;
+        /**
+          * The tracking number
+         */
+        "trackingNumber"?: string;
+    }
+    interface ShipmentComponent {
+        /**
+          * The checkpoints
+         */
+        "checkpoints"?: boolean;
+        /**
+          * Get Shipment details
+         */
+        "getShipmentDetails"?: GetShipmentDetails;
+        /**
+          * The tracking number
+         */
+        "trackingNumber"?: string;
+    }
+    interface ShipmentDetailsFactory {
+        "checkpoints"?: boolean;
+        "trackingNumber"?: string;
+    }
     interface IntrinsicElements {
+        "bluedart-tracking-component": BluedartTrackingComponent;
+        "shipment-component": ShipmentComponent;
+        "shipment-details-factory": ShipmentDetailsFactory;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "bluedart-tracking-component": LocalJSX.BluedartTrackingComponent & JSXBase.HTMLAttributes<HTMLBluedartTrackingComponentElement>;
+            "shipment-component": LocalJSX.ShipmentComponent & JSXBase.HTMLAttributes<HTMLShipmentComponentElement>;
+            "shipment-details-factory": LocalJSX.ShipmentDetailsFactory & JSXBase.HTMLAttributes<HTMLShipmentDetailsFactoryElement>;
         }
     }
 }
