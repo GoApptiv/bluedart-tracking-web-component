@@ -29,6 +29,7 @@ export class FetchHttpClient implements HttpPostClient{
       response =  await fetch(params.url, {
         method: 'POST',
         body: JSON.stringify(params.body),
+        headers: params.headers
       });
     } catch (error) {
       response = error.json();

@@ -6,13 +6,17 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class Loading {
-
   render() {
-    return <div class="min-h-screen py-6 flex flex-col justify-center sm:py-12">
-              <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7"><p>Shipment not found.</p></div>
-    <div class="flex flex-wrap justify-center">
-      <img src="../../../assets/empty.png" />
-    </div>
-  </div>;
+    return (
+      <div class="min-h-screen flex flex-col justify-center sm:py-12">
+        <div class="flex flex-col text-center w-full">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Shipment not found</h1>
+          <p class="text-gray-500">Please try again after some time if the shipment is dispatched by today.</p>
+        </div>
+        <div class="object-contain md:object-scale-down flex justify-center">
+          <img src="../../../assets/empty.png" />
+        </div>
+      </div>
+    );
   }
 }

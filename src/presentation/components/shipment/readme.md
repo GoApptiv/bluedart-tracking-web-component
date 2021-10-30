@@ -22,16 +22,18 @@
 
 ### Depends on
 
-- [shipment-meta-component](../shipment-meta)
 - [loading-component](../loading)
 - [no-data-component](../no-data)
+- [shipment-meta-component](../shipment-meta)
+- [shipment-checkpoints-component](../shipment-checkpoints)
 
 ### Graph
 ```mermaid
 graph TD;
-  shipment-component --> shipment-meta-component
   shipment-component --> loading-component
   shipment-component --> no-data-component
+  shipment-component --> shipment-meta-component
+  shipment-component --> shipment-checkpoints-component
   shipment-details-factory --> shipment-component
   style shipment-component fill:#f9f,stroke:#333,stroke-width:4px
 ```

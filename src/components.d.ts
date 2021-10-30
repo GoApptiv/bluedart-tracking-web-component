@@ -5,7 +5,9 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Checkpoint } from "./domain/models/checkpoint";
 import { GetShipmentDetails } from "./domain/usages/get-shipment-details";
+import { Shipment } from "./domain/models/shipment";
 export namespace Components {
     interface BluedartTrackingComponent {
         /**
@@ -22,6 +24,10 @@ export namespace Components {
     interface NoDataComponent {
     }
     interface ShipmentCheckpointsComponent {
+        /**
+          * The shipment checkpoints.
+         */
+        "checkpoints": Checkpoint[];
     }
     interface ShipmentComponent {
         /**
@@ -42,6 +48,10 @@ export namespace Components {
         "trackingNumber": string;
     }
     interface ShipmentMetaComponent {
+        /**
+          * The shipment details
+         */
+        "data": Shipment;
     }
 }
 declare global {
@@ -113,6 +123,10 @@ declare namespace LocalJSX {
     interface NoDataComponent {
     }
     interface ShipmentCheckpointsComponent {
+        /**
+          * The shipment checkpoints.
+         */
+        "checkpoints"?: Checkpoint[];
     }
     interface ShipmentComponent {
         /**
@@ -133,6 +147,10 @@ declare namespace LocalJSX {
         "trackingNumber"?: string;
     }
     interface ShipmentMetaComponent {
+        /**
+          * The shipment details
+         */
+        "data"?: Shipment;
     }
     interface IntrinsicElements {
         "bluedart-tracking-component": BluedartTrackingComponent;
