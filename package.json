@@ -1,7 +1,11 @@
 {
-  "name": "bluedart",
-  "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "name": "@goapptiv-code/bluedart-tracking-web-component",
+  "version": "1.0.0",
+  "description": "GoApptiv Bluedart tracking web component",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GoApptiv/bluedart-tracking-web-component.git"
+  },
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
   "es2015": "dist/esm/index.mjs",
