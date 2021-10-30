@@ -27,3 +27,9 @@ Checkpoints are optional.
 ```html
 <bluedart-tracking-component tracking-number="75484923054" checkpoints="true" />
 ```
+
+## Screenshot
+
+![Screenshot](screens/success.png)
+
+![Screenshot](screens/error.png)

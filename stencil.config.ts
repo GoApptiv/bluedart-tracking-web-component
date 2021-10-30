@@ -5,6 +5,8 @@ import autoprefixer from "autoprefixer";
 import tailwindcss from "tailwindcss";
 import cssnano from "cssnano";
 import replace from "postcss-replace";
+import dotenvPlugin from 'rollup-plugin-dotenv';
+
 
 //purge function to keep only the classes used in EACH component
 const purge = purgecss({
@@ -32,6 +34,7 @@ export const config: Config = {
   ],
   //add postcss as a plugin
   plugins: [
+    dotenvPlugin(),
     postcss({
       // add postcss plugins
       plugins: [
