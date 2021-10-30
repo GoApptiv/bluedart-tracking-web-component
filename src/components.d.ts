@@ -17,6 +17,12 @@ export namespace Components {
          */
         "trackingNumber": string;
     }
+    interface LoadingComponent {
+    }
+    interface NoDataComponent {
+    }
+    interface ShipmentCheckpointsComponent {
+    }
     interface ShipmentComponent {
         /**
           * The checkpoints
@@ -35,6 +41,8 @@ export namespace Components {
         "checkpoints": boolean;
         "trackingNumber": string;
     }
+    interface ShipmentMetaComponent {
+    }
 }
 declare global {
     interface HTMLBluedartTrackingComponentElement extends Components.BluedartTrackingComponent, HTMLStencilElement {
@@ -42,6 +50,24 @@ declare global {
     var HTMLBluedartTrackingComponentElement: {
         prototype: HTMLBluedartTrackingComponentElement;
         new (): HTMLBluedartTrackingComponentElement;
+    };
+    interface HTMLLoadingComponentElement extends Components.LoadingComponent, HTMLStencilElement {
+    }
+    var HTMLLoadingComponentElement: {
+        prototype: HTMLLoadingComponentElement;
+        new (): HTMLLoadingComponentElement;
+    };
+    interface HTMLNoDataComponentElement extends Components.NoDataComponent, HTMLStencilElement {
+    }
+    var HTMLNoDataComponentElement: {
+        prototype: HTMLNoDataComponentElement;
+        new (): HTMLNoDataComponentElement;
+    };
+    interface HTMLShipmentCheckpointsComponentElement extends Components.ShipmentCheckpointsComponent, HTMLStencilElement {
+    }
+    var HTMLShipmentCheckpointsComponentElement: {
+        prototype: HTMLShipmentCheckpointsComponentElement;
+        new (): HTMLShipmentCheckpointsComponentElement;
     };
     interface HTMLShipmentComponentElement extends Components.ShipmentComponent, HTMLStencilElement {
     }
@@ -55,10 +81,20 @@ declare global {
         prototype: HTMLShipmentDetailsFactoryElement;
         new (): HTMLShipmentDetailsFactoryElement;
     };
+    interface HTMLShipmentMetaComponentElement extends Components.ShipmentMetaComponent, HTMLStencilElement {
+    }
+    var HTMLShipmentMetaComponentElement: {
+        prototype: HTMLShipmentMetaComponentElement;
+        new (): HTMLShipmentMetaComponentElement;
+    };
     interface HTMLElementTagNameMap {
         "bluedart-tracking-component": HTMLBluedartTrackingComponentElement;
+        "loading-component": HTMLLoadingComponentElement;
+        "no-data-component": HTMLNoDataComponentElement;
+        "shipment-checkpoints-component": HTMLShipmentCheckpointsComponentElement;
         "shipment-component": HTMLShipmentComponentElement;
         "shipment-details-factory": HTMLShipmentDetailsFactoryElement;
+        "shipment-meta-component": HTMLShipmentMetaComponentElement;
     }
 }
 declare namespace LocalJSX {
@@ -71,6 +107,12 @@ declare namespace LocalJSX {
           * The tracking number
          */
         "trackingNumber"?: string;
+    }
+    interface LoadingComponent {
+    }
+    interface NoDataComponent {
+    }
+    interface ShipmentCheckpointsComponent {
     }
     interface ShipmentComponent {
         /**
@@ -90,10 +132,16 @@ declare namespace LocalJSX {
         "checkpoints"?: boolean;
         "trackingNumber"?: string;
     }
+    interface ShipmentMetaComponent {
+    }
     interface IntrinsicElements {
         "bluedart-tracking-component": BluedartTrackingComponent;
+        "loading-component": LoadingComponent;
+        "no-data-component": NoDataComponent;
+        "shipment-checkpoints-component": ShipmentCheckpointsComponent;
         "shipment-component": ShipmentComponent;
         "shipment-details-factory": ShipmentDetailsFactory;
+        "shipment-meta-component": ShipmentMetaComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -101,8 +149,12 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "bluedart-tracking-component": LocalJSX.BluedartTrackingComponent & JSXBase.HTMLAttributes<HTMLBluedartTrackingComponentElement>;
+            "loading-component": LocalJSX.LoadingComponent & JSXBase.HTMLAttributes<HTMLLoadingComponentElement>;
+            "no-data-component": LocalJSX.NoDataComponent & JSXBase.HTMLAttributes<HTMLNoDataComponentElement>;
+            "shipment-checkpoints-component": LocalJSX.ShipmentCheckpointsComponent & JSXBase.HTMLAttributes<HTMLShipmentCheckpointsComponentElement>;
             "shipment-component": LocalJSX.ShipmentComponent & JSXBase.HTMLAttributes<HTMLShipmentComponentElement>;
             "shipment-details-factory": LocalJSX.ShipmentDetailsFactory & JSXBase.HTMLAttributes<HTMLShipmentDetailsFactoryElement>;
+            "shipment-meta-component": LocalJSX.ShipmentMetaComponent & JSXBase.HTMLAttributes<HTMLShipmentMetaComponentElement>;
         }
     }
 }

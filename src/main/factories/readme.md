@@ -27,6 +27,9 @@
 ```mermaid
 graph TD;
   shipment-details-factory --> shipment-component
+  shipment-component --> shipment-meta-component
+  shipment-component --> loading-component
+  shipment-component --> no-data-component
   bluedart-tracking-component --> shipment-details-factory
   style shipment-details-factory fill:#f9f,stroke:#333,stroke-width:4px
 ```
