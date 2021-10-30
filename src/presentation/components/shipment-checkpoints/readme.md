@@ -5,6 +5,13 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property      | Attribute | Description               | Type           | Default     |
+| ------------- | --------- | ------------------------- | -------------- | ----------- |
+| `checkpoints` | --        | The shipment checkpoints. | `Checkpoint[]` | `undefined` |
+
+
 ## Dependencies
 
 ### Used by

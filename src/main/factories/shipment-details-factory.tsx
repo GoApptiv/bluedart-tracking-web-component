@@ -7,17 +7,13 @@ import { FetchHttpClient } from '../../infra/http/fetch-http-client';
   shadow: true,
 })
 export class ShipmentDetailsFactory {
-
   @Prop() trackingNumber: string;
   @Prop() checkpoints: boolean = false;
 
   render() {
     let httpClient = FetchHttpClient.getInstance();
-    const getShipmentDetails = new RemoteGetTrackingDetails(
-      `https://us-central1-common-project-goapptiv.cloudfunctions.net/getBluedartShipmentStatus`,
-      httpClient,
-    );
+    const getShipmentDetails = new RemoteGetTrackingDetails(process.env.GOAPPTIV_BLUEDART_TRACKING_API, httpClient);
 
-    return <shipment-component getShipmentDetails={getShipmentDetails} trackingNumber={this.trackingNumber} checkpoints={this.checkpoints}/>;
+    return <shipment-component getShipmentDetails={getShipmentDetails} trackingNumber={this.trackingNumber} checkpoints={this.checkpoints} />;
   }
 }
