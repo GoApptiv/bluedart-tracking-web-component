@@ -5,6 +5,8 @@ import { GetShipmentDetails } from '../../../domain/usages/get-shipment-details'
 
 @Component({
   tag: 'shipment-component',
+  styleUrl: 'shipment-component.css',
+  shadow: true,
 })
 export class ShipmentComponent {
 
@@ -56,9 +58,6 @@ export class ShipmentComponent {
     }
 
     render() {
-        return <div>
-          {!this.loading && <p>Loaded</p>}
-          <p>{this.data.shipmentStatus}</p>
-        </div>;
+        return;
       }
 }

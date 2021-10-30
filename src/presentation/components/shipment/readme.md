@@ -7,9 +7,11 @@
 
 ## Properties
 
-| Property             | Attribute | Description         | Type                 | Default     |
-| -------------------- | --------- | ------------------- | -------------------- | ----------- |
-| `getShipmentDetails` | --        | Get account summary | `GetShipmentDetails` | `undefined` |
+| Property             | Attribute         | Description          | Type                 | Default     |
+| -------------------- | ----------------- | -------------------- | -------------------- | ----------- |
+| `checkpoints`        | `checkpoints`     | The checkpoints      | `boolean`            | `undefined` |
+| `getShipmentDetails` | --                | Get Shipment details | `GetShipmentDetails` | `undefined` |
+| `trackingNumber`     | `tracking-number` | The tracking number  | `string`             | `undefined` |
 
 
 ## Dependencies
