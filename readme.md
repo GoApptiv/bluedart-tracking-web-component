@@ -33,3 +33,28 @@ Checkpoints are optional.
 ![Screenshot](screens/success.png)
 
 ![Screenshot](screens/error.png)
+
+## Integration with ReactJS
+
+With an application built using the create-react-app script the easiest way to include the component library is to call defineCustomElements() from the index.js file. Note that in this scenario applyPolyfills is needed if you are targeting Edge or IE11.
+
+```js
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+
+// Add the below import
+import {
+  applyPolyfills,
+  defineCustomElements,
+} from "@goapptiv-code/bluedart-tracking-web-component/loader";
+
+...
+
+applyPolyfills().then(() => {
+  defineCustomElements();
+});
+
+```
+
+[Stencil JS React Integration Guide](https://stenciljs.com/docs/react)
