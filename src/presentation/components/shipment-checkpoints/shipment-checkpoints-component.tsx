@@ -34,6 +34,7 @@ export class ShipmentCheckpoints {
                           <p class="leading-relaxed">
                             {c.scanDate} {c.scanTime}
                           </p>
+                          <p class="leading-relaxed">{Utils.capitalizeFirstLetter(c.scannedLocation)}</p>
                         </div>
                       </div>
                     );

@@ -66,7 +66,7 @@ export class ShipmentComponent {
         {this.data.shipmentStatus == 'NO_INFO' && <no-data-component />}
         {this.data.shipmentStatus !== 'NO_INFO' && <shipment-meta-component data={this.data} />}
         <div class="container px-5 py-12 mx-auto">
-          {this.data.shipmentStatus !== 'NO_INFO' && this.checkpoints && <shipment-checkpoints-component checkpoints={this.data.checkpoints} />}
+          <div>{this.data.shipmentStatus !== 'NO_INFO' && this.checkpoints && <shipment-checkpoints-component checkpoints={this.data.checkpoints} />}</div>
         </div>
       </div>
     );
