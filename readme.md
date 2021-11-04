@@ -10,11 +10,13 @@ Install the web component using npm
 npm i @goapptiv-code/bluedart-tracking-web-component
 ```
 
-Add the following keys to your environment variables. Please contact the package manager for the following key values.
+Add the following keys to your environment variables. You can deploy your own cloud function and add the url
 
 ```env
 GOAPPTIV_BLUEDART_TRACKING_API=
 ```
+
+[Bluedart Tracking JSON API Cloud Function](https://github.com/sagarv1997/bluedart-tracking-json-api-nodejs-cf)
 
 ## Usage
 
