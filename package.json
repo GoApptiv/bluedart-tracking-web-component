@@ -1,6 +1,6 @@
 {
   "name": "@goapptiv-code/bluedart-tracking-web-component",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "GoApptiv Bluedart tracking web component",
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@stencil/core": "^2.7.0",
+    "deploy": "^1.0.3",
     "rollup-plugin-dotenv": "^0.3.0"
   },
   "devDependencies": {
